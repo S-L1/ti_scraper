@@ -14,7 +14,7 @@ Ziel war die Erstellung einer möglichst konfigurierbaren und individuell anpass
 Beispiele für die Ergebnisdateien der mit der Standardkonfiguration ausgeführten Skripte befinden sich im Unterverzeichnis [Examples](/assets/examples) des Repositorys. Das Demo-Video zeigt die Ausführung des [retrieve_articles.py](/scripts/retrieve_articles.py) mit integriertem Profiling in der PaloAlto Cortex XSOAR.</br>
 
 
-https://github.com/sandra-liedtke/ti_scraper/assets/60545571/ad395406-6c77-4d23-b473-cf2a0d154096
+https://github.com/S-L1/ti_scraper/assets/60545571/ad395406-6c77-4d23-b473-cf2a0d154096
 
 
 
@@ -22,7 +22,7 @@ WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einf
 Eine weitere Möglichkeit, die Skripte anzupassen und zu erweitern, ist in der Datei [Extensibility (en)](Extensibility(en).md) beschrieben.
 
 Diese Arbeit unterliegt den Bestimmungen einer MIT-Lizenz.<br/>
-© 2023 Sandra Liedtke.
+© 2023 S. Liedtke.
 
 ### System-Anforderungen
 
@@ -71,7 +71,7 @@ The purpose was the creation of a configurable and individually adjustable colle
 Examples for the result files of the scripts run with the default configuration can be found in the repository sub-directory [Examples](/assets/examples). The demo video shows the execution of [retrieve_articles.py](/scripts/retrieve_articles.py) with integrated profiling in the PaloAlto Cortex XSOAR.</br>
 
 
-https://github.com/sandra-liedtke/ti_scraper/assets/60545571/eea9f576-4fb1-4873-8682-dbd121d00957
+https://github.com/S-L1/ti_scraper/assets/60545571/eea9f576-4fb1-4873-8682-dbd121d00957
 
 
 
@@ -79,7 +79,7 @@ IMPORTANT: Each of the scripts uses a configuration file which allows a fast and
 Further options to adjust and extend the scripts are described in the file [Extensibility (en)](Extensibility(en).md).
 
 This work is licensed under an MIT License.<br/>
-© 2023 Sandra Liedtke.
+© 2023 S. Liedtke.
 
 ### System Requirements
 
