@@ -62,15 +62,23 @@ def send_api_request(curr_updt_value, indicator_name):
             ioc_object.timestamp = found_indicator.ioc_objects[0]['timestamp']
             ioc_object.value = found_indicator.ioc_objects[0]['value']
             ioc_object.version = found_indicator.ioc_objects[0]['version']
-            # enter the current article as a new Community Note
-            ioc_object.custom_fields['communitynotes'].append({'notes': curr_updt_value.replace('\n', ': '), "timestamp": datetime.datetime.now()})
-            # the actual API-Request
-            try:
-                api_response = api_instance.indicators_edit(ioc_object=ioc_object)
-                print(api_response)
-            except ApiException as e:
-                print(e)
-                print("Error while writing " + indicator_name + " to Cortex XSOAR")
+            # don't add the current article if it is already in the record
+            record_exists = False
+            for existing_entry in found_indicator.ioc_objects[0]['CustomFields']['communitynotes']:
+                if curr_updt_value.replace('\n', ': ') == existing_entry['notes']:
+                    record_exists = True
+                    break
+            if not record_exists:
+                # add the new article record
+                ioc_object.custom_fields['communitynotes'].append({'notes': curr_updt_value.replace('\n', ': '), "timestamp": datetime.datetime.now()})
+                # the actual API-Request
+                try:
+                    api_response = api_instance.indicators_edit(ioc_object=ioc_object)
+                    print(api_response)
+                    print("Updated indicator with value " + str(ioc_object.value))
+                except ApiException as e:
+                    print(e)
+                    print("Error while writing " + indicator_name + " to Cortex XSOAR")
         elif found_indicator.total == 0:
             # indicator does not exist -> let user chose to create it
             try:
