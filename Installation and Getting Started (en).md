@@ -4,7 +4,7 @@ This document describes how to initially prepare your environment, dependent lib
 
 ## Windows
 
- - Install Python 3.9 or higher from [here](https://www.python.org/downloads/)
+ - Install Python 3.10 or higher from [here](https://www.python.org/downloads/)
  - Open Command Prompt and type `python --version`
      - If Python is **not** recognized as a command, do the following:
      - Open the *Environment Variables* and add the path to the Python Installation to the *Path* variable
@@ -28,7 +28,7 @@ This document describes how to initially prepare your environment, dependent lib
 
 # Getting Started
 
- - Download the repository and extract it
+ - Download the repository and extract it or clone it
  - Review the configurations in the related *_config.json and adjust them where necessary
  - In the Command Line, navigate to the extracted folder and then navigate to the scripts folder
  - Type `python <scriptname>.py` or - if on Linux - `python3 <scriptname>.py` to start the script

@@ -37,6 +37,12 @@ def clean_webpages(websites):
                 if headline == "":
                     if not cleaned_result.startswith('http'):
                         headline = cleaned_result.strip("/").replace('-', ' ').replace('.html', '').title()
+                    elif "theregister" in cleaned_result:
+                        hl = entry.find('h2')
+                        if not hl is None and not hl == "":
+                            headline = str(hl).replace('<h2 class="headline t20" itemprop="headline" style="">', '').replace('\n</h2>', '')
+                        else:
+                            headline = cleaned_result.strip("/").split("/")[len(cleaned_result.strip("/").split("/"))-1].replace('-', ' ').replace('.html', '').title()
                     else:
                         headline = cleaned_result.strip("/").split("/")[len(cleaned_result.strip("/").split("/"))-1].replace('-', ' ').replace('.html', '').title()
                 # remove unnecessary extracted entries which are excluded by the stopwords
@@ -83,7 +89,7 @@ def format_result(all_articles):
         # if the loop has not yet been stopped due to special handling
         else:
             # build and format record for each article to be added to the result
-            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/').replace('theregister.com/security//', 'theregister.com/').replace('/blog/blog/', '/blog/')  +  '\n\n' )
+            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/').replace('/blog/blog/', '/blog/') +  '\n\n' )
             result_str += new_record
     return result_str
 

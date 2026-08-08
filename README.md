@@ -27,7 +27,7 @@ Diese Arbeit unterliegt den Bestimmungen einer MIT-Lizenz.<br/>
 ### System-Anforderungen
 
  - Die Skripte wurden auf Windows und Linux getestet
- - Python 3.9 oder höher
+ - Python 3.10 oder höher
  - Python Libraries, die ggf. separat installiert werden müssen:
      - beautifulsoup4
      - requests
@@ -84,7 +84,7 @@ This work is licensed under an MIT License.<br/>
 ### System Requirements
 
  - The scripts have been tested on Windows and Linux
- - Python 3.9 or higher
+ - Python 3.10 or higher
  - Python libraries which might need separate installation: 
      - beautifulsoup4
      - requests

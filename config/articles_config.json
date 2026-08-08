@@ -1,21 +1,17 @@
 {
     "websiteconfig": {
         "rss_feeds": [
-            "https://www.darkreading.com/rss.xml"
+            "https://www.darkreading.com/rss.xml",
+            "https://www.heise.de/security/feed.xml"
         ],
         "webpages": [
             "https://www.bleepingcomputer.com/news/security",
             "https://thehackernews.com",
             "https://www.infosecurity-magazine.com/news/",
-            "https://www.security-insider.de/fachbeitraege",
-            "https://www.heise.de/security/news"
+            "https://www.security-insider.de/fachbeitraege"
             ],
         "stopwords": [
-            "it-sicherheit/page", 
-            "mediadaten",
             "/datenschutz",
-            "vogel.de",
-            "bildergalerien",
             "/agb/",
             "analytics",
             "data-google",
@@ -50,7 +46,6 @@
             "/tutorials/"
         ],
         "specialHandling": {
-            "heise": "https://www.heise.de/security//news/",
             "infosecurity": "https://www.infosecurity-magazine.com/news/",
             "bleeping": "https://www.bleepingcomputer.com/news/security"
         }
